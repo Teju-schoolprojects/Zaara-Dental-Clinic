@@ -391,19 +391,91 @@ img {
   width: 100%;
 }
 
-.hero-content {
+.hero-glass-card {
   position: relative;
   z-index: 2;
-  max-width: 680px;
-  color: #ffffff;
+  max-width: 660px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2.75rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .hero-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.22;
   color: #ffffff !important;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.gradient-text-glow {
+  background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  filter: drop-shadow(0 4px 14px rgba(45, 212, 191, 0.4));
 }
 
 .hero-desc {
+  font-size: 1.12rem;
   color: #e2e8f0 !important;
+  margin-bottom: 2rem;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.badge-glow {
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.4);
+}
+
+.badge-glow-gold {
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.35);
+}
+
+.btn-glow {
+  box-shadow: 0 10px 30px rgba(13, 148, 136, 0.5) !important;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 14px 36px rgba(13, 148, 136, 0.7) !important;
+}
+
+.btn-pulse {
+  animation: subtlePulse 2s infinite alternate;
+}
+
+@keyframes subtlePulse {
+  0% { box-shadow: 0 8px 20px rgba(239, 68, 68, 0.35); }
+  100% { box-shadow: 0 12px 30px rgba(239, 68, 68, 0.65); }
+}
+
+.hero-highlights {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  flex-wrap: wrap;
+}
+
+.highlight-glass {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.75rem 1.15rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all var(--transition-fast);
+}
+
+.highlight-glass:hover {
+  background: rgba(20, 184, 166, 0.2);
+  border-color: var(--primary-teal);
+  transform: translateY(-2px);
 }
 
 .highlight-text strong {
@@ -412,88 +484,6 @@ img {
 
 .highlight-text span {
   color: #cbd5e1 !important;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 560px;
-  margin-left: 0;
-  margin-right: auto;
-  text-align: left;
-}
-
-.hero-content .badges-wrapper {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
-}
-
-.hero-title {
-  font-family: var(--font-heading);
-  font-size: 2.35rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--text-main);
-  margin-bottom: 1.25rem;
-}
-
-.hero-title span {
-  background: linear-gradient(135deg, var(--primary-teal), var(--accent-cyan));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero-desc {
-  font-size: 1.15rem;
-  color: var(--text-muted);
-  margin-bottom: 2rem;
-  line-height: 1.7;
-}
-
-.hero-ctas {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.5rem;
-}
-
-.hero-highlights {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-light);
-}
-
-.highlight-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.highlight-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-sm);
-  background: var(--primary-teal-light);
-  color: var(--primary-teal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-}
-
-.highlight-text strong {
-  display: block;
-  font-size: 1.05rem;
-  color: var(--text-main);
-}
-
-.highlight-text span {
-  font-size: 0.8rem;
-  color: var(--text-muted);
 }
 
 /* Hero Visual Card */
